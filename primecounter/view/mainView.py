@@ -51,7 +51,7 @@ class MainView(QMainWindow, Ui_MainWindow):
         elif self.rbMR.isChecked():
             algorithm = millerRabbin
 
-        self.search(algorithm, limit)
+        self.search(algorithm, limit - 1)
 
     def search(self, algorithm, limit):
 

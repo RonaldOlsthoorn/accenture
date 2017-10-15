@@ -13,8 +13,7 @@ if sys.platform == 'win32':
     exe = Executable(
         'primecounter.py',
         targetName="primecounter.exe",
-        base="Win32GUI",
-        icon="img/logo.ico")
+        base="Win32GUI")
 else:
     exe = Executable(
         'primecounter.py',
@@ -22,7 +21,7 @@ else:
         copyDependentFiles=True
     )
 
-includefiles = ['data/', 'img/']
+includefiles = ['img/']
 
 options = {
     'build_exe': {
