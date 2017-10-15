@@ -21,7 +21,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>Zoek priemgetallen tot aan: </string>
+          <string>Search primes until: </string>
          </property>
         </widget>
        </item>
@@ -32,36 +32,19 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
-        <widget class="QPushButton" name="searchButton">
-         <property name="text">
-          <string>Zoek</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QPushButton" name="interruptButton">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="text">
-          <string>Onderbreken</string>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Algoritme: </string>
+          <string>Algorithm</string>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QRadioButton" name="rbAKS">
+          <widget class="QRadioButton" name="rbMR">
            <property name="text">
-            <string>AKS</string>
+            <string>Miller-Rabbin</string>
            </property>
            <property name="checked">
             <bool>true</bool>
@@ -69,13 +52,56 @@
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="rbMR">
+          <widget class="QRadioButton" name="rbAKS">
            <property name="text">
-            <string>Miller-Rabbin</string>
+            <string>AKS</string>
            </property>
           </widget>
          </item>
         </layout>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="interruptButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Abort search</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="searchButton">
+         <property name="text">
+          <string>Search</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPlainTextEdit" name="plainTextEdit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="plainText">
+          <string>Use Miller-Rabbin for fast prime number search. Correct results guaranteed up to 341550071728321. 
+Use AKS if you need guarantees correct results for any range of numbers. AKS is significantly slower.</string>
+         </property>
+         <property name="backgroundVisible">
+          <bool>false</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -91,7 +117,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Resultaten</string>
+          <string>Results</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -103,7 +129,7 @@
          <item row="0" column="0">
           <widget class="QLabel" name="label_4">
            <property name="text">
-            <string>Aantal gevonden priemgetallen:</string>
+            <string>Number of primes found: </string>
            </property>
           </widget>
          </item>
