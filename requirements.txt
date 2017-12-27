@@ -25,4 +25,4 @@ PySide==1.2.4
 #six==1.10.0
 #xlrd==0.9.4
 # Uncomment this package when installing on windows, unnecessary on Linux
-#cx-Freeze==4.3.4
+cx-Freeze==4.3.4
